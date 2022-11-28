@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardReg">
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/cardRegBackBtn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/backicon" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="카드를 등록해 주세요"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/cardRegBtn1"
+                    android:layout_width="255dp"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#40BFFF"
+                    android:textColorHint="#40BFFF"
+                    android:textSize="30sp"
+                    app:backgroundTint="#40BFFF"
+                    app:cornerRadius="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView17"
+                    app:strokeColor="#40BFFF"
+                    app:strokeWidth="3dp" />
+
+                <Button
+                    android:id="@+id/cardRegBtn2"
+                    android:layout_width="145dp"
+                    android:layout_height="55dp"
+                    android:text="카드 등록"
+                    android:textColor="#40BFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#FFF"
+                    app:cornerRadius="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cardRegBtn1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/cardRegUntactRes"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon1"
+            android:includeFontPadding="false"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="비대면"
+            android:textColor="#40BFFF"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cardRegContactRes"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/cardRegContactRes"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon2"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="병원예약"
+            android:textColor="#333"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cardRegDiagnosis"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cardRegUntactRes"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/cardRegDiagnosis"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon3"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="피드백"
+            android:textColor="#333"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cardRegMyPage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cardRegContactRes"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/cardRegMyPage"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon4"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="마이페이지"
+            android:textColor="#333"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cardRegDiagnosis"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

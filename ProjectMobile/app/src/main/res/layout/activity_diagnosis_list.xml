@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiagnosisList">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/diagListBackBtn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/backicon" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="검진 내역 조회"
+                    android:textColor="#333"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="전체 6건"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+                <Button
+                    android:id="@+id/musicBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="음악 들으며 기다리기"
+                    android:textColor="#40BFFF"
+                    app:backgroundTint="#fff"
+                    app:cornerRadius="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="#40BFFF"
+                    app:strokeWidth="1dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#40BFFF"
+                    android:gravity="center"
+                    android:text="진료일자"
+                    android:textColor="#FFFFFF"
+                    app:circularflow_defaultRadius="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textView31"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#40BFFF"
+                    android:gravity="center"
+                    android:text="의료기관"
+                    android:textColor="#FFFFFF"
+                    app:circularflow_defaultRadius="30dp"
+                    app:circularflow_radiusInDP="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textView32"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView30"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#40BFFF"
+                    android:gravity="center"
+                    android:text="병원 예약하기"
+                    android:textColor="#FFFFFF"
+                    app:circularflow_defaultRadius="30dp"
+                    app:circularflow_radiusInDP="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/textView33"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView31"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#40BFFF"
+                    android:gravity="center"
+                    android:text="진단결과"
+                    android:textColor="#FFFFFF"
+                    app:circularflow_defaultRadius="30dp"
+                    app:circularflow_radiusInDP="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView32"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="2022-06-13"
+                    android:textColor="#333"
+                    app:circularflow_defaultRadius="30dp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView39"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="밝은미래치과"
+                    android:textColor="#333"
+                    app:circularflow_defaultRadius="30dp"
+                    app:circularflow_radiusInDP="30dp"
+                    app:layout_constraintEnd_toStartOf="@+id/button6"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView38"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="예약하기"
+                    android:textColor="#40BFFF"
+                    app:backgroundTint="#FFFFFF"
+                    app:layout_constraintEnd_toStartOf="@+id/diagnosisResult1"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView39"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="#40BFFF"
+                    app:strokeWidth="2dp" />
+
+                <TextView
+                    android:id="@+id/diagnosisResult1"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="상세보기"
+                    android:textColor="#9A9A9A"
+                    app:circularflow_defaultRadius="30dp"
+                    app:circularflow_radiusInDP="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button6"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="2021-11-27"
+                    android:textColor="#333"
+                    app:circularflow_defaultRadius="30dp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView43"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView43"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="서울만안치과"
+                    android:textColor="#333"
+                    app:circularflow_defaultRadius="30dp"
+                    app:circularflow_radiusInDP="30dp"
+                    app:layout_constraintEnd_toStartOf="@+id/button7"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView42"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="예약하기"
+                    android:textColor="#40BFFF"
+                    app:backgroundTint="#FFFFFF"
+                    app:layout_constraintEnd_toStartOf="@+id/diagnosisResult2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView43"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="#40BFFF"
+                    app:strokeWidth="2dp" />
+
+                <TextView
+                    android:id="@+id/diagnosisResult2"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="상세보기"
+                    android:textColor="#9A9A9A"
+                    app:circularflow_defaultRadius="30dp"
+                    app:circularflow_radiusInDP="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button7"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView45"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="2021-04-30"
+                    android:textColor="#333"
+                    app:circularflow_defaultRadius="30dp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView46"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView46"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="김정철치과"
+                    android:textColor="#333"
+                    app:circularflow_defaultRadius="30dp"
+                    app:circularflow_radiusInDP="30dp"
+                    app:layout_constraintEnd_toStartOf="@+id/button8"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView45"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="예약하기"
+                    android:textColor="#40BFFF"
+                    app:backgroundTint="#FFFFFF"
+                    app:layout_constraintEnd_toStartOf="@+id/diagnosisResult3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView46"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="#40BFFF"
+                    app:strokeWidth="2dp" />
+
+                <TextView
+                    android:id="@+id/diagnosisResult3"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="상세보기"
+                    android:textColor="#9A9A9A"
+                    app:circularflow_defaultRadius="30dp"
+                    app:circularflow_radiusInDP="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button8"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView48"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="2021-01-08"
+                    android:textColor="#333"
+                    app:circularflow_defaultRadius="30dp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView49"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView49"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="내이처럼"
+                    android:textColor="#333"
+                    app:circularflow_defaultRadius="30dp"
+                    app:circularflow_radiusInDP="30dp"
+                    app:layout_constraintEnd_toStartOf="@+id/button9"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView48"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="예약하기"
+                    android:textColor="#40BFFF"
+                    app:backgroundTint="#FFFFFF"
+                    app:layout_constraintEnd_toStartOf="@+id/diagnosisResult4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView49"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="#40BFFF"
+                    app:strokeWidth="2dp" />
+
+                <TextView
+                    android:id="@+id/diagnosisResult4"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="상세보기"
+                    android:textColor="#9A9A9A"
+                    app:circularflow_defaultRadius="30dp"
+                    app:circularflow_radiusInDP="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button9"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView51"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="2020-12-17"
+                    android:textColor="#333"
+                    app:circularflow_defaultRadius="30dp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView52"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView52"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="이건치과"
+                    android:textColor="#333"
+                    app:circularflow_defaultRadius="30dp"
+                    app:circularflow_radiusInDP="30dp"
+                    app:layout_constraintEnd_toStartOf="@+id/button10"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView51"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="예약하기"
+                    android:textColor="#40BFFF"
+                    app:backgroundTint="#FFFFFF"
+                    app:layout_constraintEnd_toStartOf="@+id/diagnosisResult5"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView52"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="#40BFFF"
+                    app:strokeWidth="2dp" />
+
+                <TextView
+                    android:id="@+id/diagnosisResult5"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="상세보기"
+                    android:textColor="#9A9A9A"
+                    app:circularflow_defaultRadius="30dp"
+                    app:circularflow_radiusInDP="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button10"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView54"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="2020-05-09"
+                    android:textColor="#333"
+                    app:circularflow_defaultRadius="30dp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView55"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView55"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="장치과"
+                    android:textColor="#333"
+                    app:circularflow_defaultRadius="30dp"
+                    app:circularflow_radiusInDP="30dp"
+                    app:layout_constraintEnd_toStartOf="@+id/button11"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView54"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="예약하기"
+                    android:textColor="#40BFFF"
+                    app:backgroundTint="#FFFFFF"
+                    app:layout_constraintEnd_toStartOf="@+id/diagnosisResult6"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView55"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="#40BFFF"
+                    app:strokeWidth="2dp" />
+
+                <TextView
+                    android:id="@+id/diagnosisResult6"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:text="상세보기"
+                    android:textColor="#9A9A9A"
+                    app:circularflow_defaultRadius="30dp"
+                    app:circularflow_radiusInDP="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/button11"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/diagListUntactRes"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon1"
+            android:includeFontPadding="false"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="비대면"
+            android:textColor="#333"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/diagListContactRes"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/diagListContactRes"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon2"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="병원예약"
+            android:textColor="#40BFFF"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/diagListDiagnosis"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/diagListUntactRes"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/diagListDiagnosis"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon3"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="피드백"
+            android:textColor="#333"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/diagListMyPage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/diagListContactRes"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/diagListMyPage"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon4"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="마이페이지"
+            android:textColor="#333"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/diagListDiagnosis"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

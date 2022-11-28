@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Map" >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/hospital"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MapsActivity" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hospital"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="#FFFFFF"
+        app:circularflow_defaultRadius="10dp"
+        app:circularflow_radiusInDP="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#40BFFF"
+            android:gravity="center"
+            android:text="예약 가능"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="연세치과의원"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="031-441-3925"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="경기도 안양시 만안구 안양로 999번길 203호"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <Button
+            android:id="@+id/reservationBtn"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:text="예약하기"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="#40BFFF"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/listBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="목록 보기"
+        android:textColor="#40BFFF"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/hospital"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/mapUntactRes"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon1"
+            android:includeFontPadding="false"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="비대면"
+            android:textColor="#40BFFF"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mapContactRes"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/mapContactRes"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon2"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="병원예약"
+            android:textColor="#333"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mapDiagnosis"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mapUntactRes"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/mapDiagnosis"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon3"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="피드백"
+            android:textColor="#333"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mapMyPage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mapContactRes"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/mapMyPage"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon4"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="마이페이지"
+            android:textColor="#333"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mapDiagnosis"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

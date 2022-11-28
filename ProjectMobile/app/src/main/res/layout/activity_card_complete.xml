@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardComplete">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/cardComBackBtn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/backicon" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="카드가 등록되어 있습니다."
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/cardImage"
+                    android:layout_width="308dp"
+                    android:layout_height="195dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/card" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/reservationBtn"
+                    android:layout_width="330dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="10dp"
+                    android:text="비대면 진단 신청하기"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#40BFFF"
+                    app:cornerRadius="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/cardComUntactRes"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon1"
+            android:includeFontPadding="false"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="비대면"
+            android:textColor="#40BFFF"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cardComContactRes"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/cardComContactRes"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon2"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="병원예약"
+            android:textColor="#333"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cardComDiagnosis"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cardComUntactRes"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/cardComDiagnosis"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon3"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="피드백"
+            android:textColor="#333"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cardComMyPage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cardComContactRes"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/cardComMyPage"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon4"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="마이페이지"
+            android:textColor="#333"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cardComDiagnosis"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

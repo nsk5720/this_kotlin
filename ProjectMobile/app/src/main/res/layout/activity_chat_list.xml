@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatListActivity">
+
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="진단하기"
+        app:backgroundTint="#40bfff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerRooms"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCreate" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/diagUntactRes"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon1"
+            android:includeFontPadding="false"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="비대면"
+            android:textColor="#333"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/diagContactRes"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/diagContactRes"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon2"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="병원예약"
+            android:textColor="#333"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/diagDiagnosis"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/diagUntactRes"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/diagDiagnosis"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon3"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="피드백"
+            android:textColor="#40BFFF"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/diagMyPage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/diagContactRes"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/diagMyPage"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="-7dp"
+            android:drawableTop="@drawable/menuicon4"
+            android:paddingTop="10dp"
+            android:paddingBottom="0dp"
+            android:text="마이페이지"
+            android:textColor="#333"
+            android:textSize="10sp"
+            app:backgroundTint="#fff"
+            app:cornerRadius="0dp"
+            app:iconPadding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/diagDiagnosis"
+            app:strokeColor="#40BFFF"
+            app:strokeWidth="1dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
